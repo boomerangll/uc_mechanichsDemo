@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerStr : Player {
     private float timeBetweenJumps = 2f;
-    private float currentTime      = 0f;
 
     private bool jumpReady = true;
 
@@ -21,7 +20,7 @@ public class PlayerStr : Player {
     }
 
     private IEnumerator startJumpCountdime() {
-        currentTime = 0f;
+        float currentTime = 0f;
 
         while (currentTime < timeBetweenJumps) {
             yield return new WaitForSeconds(1.0f);

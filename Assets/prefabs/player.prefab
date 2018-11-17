@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259677790299490}
   - component: {fileID: 50254946879239268}
-  - component: {fileID: 114506699293028406}
+  - component: {fileID: 114267410491647790}
   m_Layer: 8
   m_Name: player
   m_TagString: Untagged
@@ -306,7 +306,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5049567}
   m_EdgeRadius: 0
---- !u!114 &114506699293028406
+--- !u!114 &114267410491647790
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,6 +322,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   groundCheck: {fileID: 4106789770308440}
+  moveForce: 40
+  jumpForceY: 400
+  jumpForceX: 0
 --- !u!212 &212003677675595652
 SpriteRenderer:
   m_ObjectHideFlags: 1

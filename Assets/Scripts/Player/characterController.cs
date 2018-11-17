@@ -5,6 +5,11 @@ public class characterController : MonoBehaviour {
 
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private Transform groundCheck;
+    
+    // ToDo: for developer
+    [SerializeField] private float moveForce  = 40f;
+    [SerializeField] private float jumpForceY = 400f;
+    [SerializeField] private float jumpForceX = 0f;
 
     const float groundedRadius = .2f;
 
@@ -66,7 +71,7 @@ public class characterController : MonoBehaviour {
     }
 
     public void move() {
-        float move = Time.deltaTime * direction * currentPlayer.getMoveForce();
+        float move = Time.deltaTime * direction * /*currentPlayer.getMoveForce()*/moveForce; // ToDo: for developer
 
         Vector3 targetVelocity = new Vector2(move * 10f, rigidbody2D.velocity.y);
         rigidbody2D.velocity =
@@ -81,7 +86,8 @@ public class characterController : MonoBehaviour {
         if (currentPlayer.isJumping && currentPlayer.canJump()) {
             currentPlayer.setIsGrounded(false);
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0f);
-            rigidbody2D.AddForce(new Vector2(0f, currentPlayer.getJumpForce()));
+            rigidbody2D.AddForce(new Vector2(                  /*0f, currentPlayer.getJumpForce()*/
+                                     jumpForceX * direction, jumpForceY)); // ToDo: for developer
         }
     }
 
