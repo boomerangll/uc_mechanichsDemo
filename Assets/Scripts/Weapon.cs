@@ -6,7 +6,7 @@ public class Weapon {
 
     public Weapon(float strengthMultiplier, float baseStrength, WeaponType weaponType) {
         this.strengthMultiplier = strengthMultiplier;
-        this.baseStrength = baseStrength;
-        this.weaponType = weaponType;
+        this.baseStrength       = baseStrength;
+        this.weaponType         = weaponType;
     }
 }
