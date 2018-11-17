@@ -5,6 +5,9 @@ TextureImporter:
     21300000: New Piskel (1)_0
     21300002: New Piskel (1)_1
     21300004: New Piskel (1)_2
+    21300006: weapon_0
+    21300008: weapon_1
+    21300010: weapon_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -87,7 +90,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (1)_0
+      name: weapon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -95,19 +98,19 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c6dfa70f69fab4284f5ad660462f4e
+      spriteID: 41f78e4d11c8d9140aa817a9247bb2a3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (1)_1
+      name: weapon_1
       rect:
         serializedVersion: 2
         x: 32
@@ -115,19 +118,19 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e0704a0182d974e9dd86777f63a7cf
+      spriteID: 7603e9a090aa5074daf1c014a07816ba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (1)_2
+      name: weapon_2
       rect:
         serializedVersion: 2
         x: 0
@@ -135,13 +138,13 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95d1340e8620f4a45ba1666a11a90945
+      spriteID: 85cd2752c15bf9147ab0e1c4a4383215
       vertices: []
       indices: 
       edges: []
