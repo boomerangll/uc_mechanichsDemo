@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerStr : Player {
     private float timeBetweenJumps = 2f;
+    private float currentTime = 0f;
+
     private bool jumpReady = true;
     private bool playerJustJumped = false;
 
@@ -20,7 +22,7 @@ public class PlayerStr : Player {
             playerJustJumped = false;
             jumpReady = false;
 
-            //MonoBehaviourInstance.getMonoBehaviourInstance();
+            MonoBehasviourInstance.instance.StartCoroutine(startJumpCountdime());
         }
     }
 
@@ -29,10 +31,11 @@ public class PlayerStr : Player {
     }
 
     private IEnumerator startJumpCountdime () {
-        float currentTime = 0f;
-        while (currentTime <= timeBetweenJumps) {
+        currentTime = 0f;
+
+        while (currentTime < timeBetweenJumps) {
             yield return new WaitForSeconds(1.0f);
-            timeBetweenJumps++;
+            currentTime++;
         }
 
         jumpReady = true;

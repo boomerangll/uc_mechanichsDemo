@@ -14,7 +14,7 @@ public class characterController : MonoBehaviour {
 
     Player currentPlayer;
     GameObject[] playerObjects;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
 
     readonly PlayerNormal playerNormal = new PlayerNormal();
     readonly PlayerDex playerDex = new PlayerDex();
@@ -25,6 +25,8 @@ public class characterController : MonoBehaviour {
         playerObjects = GameObject.FindGameObjectsWithTag("player");
         changeToNormal();
     }
+
+    private bool gotHere = false;
 
     void Update () {
         direction = Input.GetAxisRaw("Horizontal");
@@ -49,12 +51,24 @@ public class characterController : MonoBehaviour {
     private void FixedUpdate () {
         move();
 
-        currentPlayer.setIsJumping(false);
+        if (currentPlayer.isJumping) {
+            currentPlayer.setIsJumping(false);
+        }
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
-        for (int i = 0; i < colliders.Length; i++) {
-            if (colliders[i].gameObject != gameObject)
-                currentPlayer.setIsGrounded(true);
+        if (!currentPlayer.isGrounded) {
+            Debug.Log("gotHerere");
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
+            for (int i = 0; i < colliders.Length; i++) {
+                if (colliders[i].gameObject != gameObject) {
+                    if (gotHere) {
+                        currentPlayer.setIsGrounded(true);
+                        gotHere = false;
+                    }
+
+                    Debug.Log('1');
+                    gotHere = true;
+                }
+            }
         }
     }
 
@@ -69,6 +83,10 @@ public class characterController : MonoBehaviour {
         } else if (move < 0 && facingRight) {
             Flip();
         }
+
+        //Debug.Log("isJumping: " + currentPlayer.isJumping);
+        //Debug.Log("can jump : " + currentPlayer.canJump());
+        //Debug.Log("is grounded : " + currentPlayer.isGrounded);
 
         if (currentPlayer.isJumping && currentPlayer.canJump()) {
             currentPlayer.setIsGrounded(false);
@@ -97,7 +115,7 @@ public class characterController : MonoBehaviour {
 
     private void changeToStr () {
         changePlayer("playerStr");
-        //currentPlayer = playerStr;
+        currentPlayer = playerStr;
     }
 
     private void changePlayer (string playerName) {

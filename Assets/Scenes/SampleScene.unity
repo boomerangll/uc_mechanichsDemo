@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836685326}
   - component: {fileID: 836685325}
+  - component: {fileID: 836685327}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -259,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e2915915ec0cf45b6bda91ea5c97a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spawnLocation: {fileID: 0}
+  player: {fileID: 1440119158}
+  spawnLocation: {fileID: 1510810046}
 --- !u!4 &836685326
 Transform:
   m_ObjectHideFlags: 0
@@ -275,6 +276,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836685327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836685324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d222f03c067954fb6654810df4dc12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1440119158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1715146878300996, guid: 532be939dd6a35649986165de3e741d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1939810619}
 --- !u!1 &1510810045
 GameObject:
   m_ObjectHideFlags: 0
