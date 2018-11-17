@@ -15,11 +15,11 @@ public class Player {
         isJumping = false;
     }
 
-    public float move () {
+    public float getMoveForce () {
         return moveForce;
     }
 
-    public float jump () {
+    public float getJumpForce () {
         return jumpForce;
     }
 
