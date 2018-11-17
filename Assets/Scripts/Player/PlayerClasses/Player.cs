@@ -23,6 +23,10 @@ public class Player {
         return jumpForce;
     }
 
+    public virtual Vector2 getAdditionalJumpForce() {
+        return new Vector2(0f, 0f);
+    }
+
     public virtual void setIsGrounded (bool isGrounded) {
         this.isGrounded = isGrounded;
     }
